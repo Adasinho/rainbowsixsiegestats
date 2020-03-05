@@ -1,3 +1,14 @@
+section {
+    background-color: #282c34;
+    color: snow;
+    min-height: 100vh;
+}
+
+section .player-name {
+    font-size: 28px;
+    padding: 20px 0;
+}
+
 header input {
     border-radius: 15px;
     padding: 5px 15px;
@@ -15,4 +26,37 @@ header form {
 
 .loading {
     padding: 20px;
+}
+
+.window {
+    margin: 10px 0;
+}
+
+.window .title {
+    background-color: #434a56;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 100;
+    padding: 10px 20px;
+}
+
+.items {
+    background-color: #373d48;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+}
+
+.items .item {
+    padding: 10px;
+}
+
+.items .item .prop-name {
+    color: silver;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.items .item .prop-value {
+    font-size: 32px;
 }

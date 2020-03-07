@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be78a70-1e83-4716-9db1-ef6ccf942051" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/class/PlayerStats.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ApplicationView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/collections/Operators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/class/PlayerStats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/class/PlayerStats.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/theme.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Hooks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -43,6 +39,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -87,7 +84,10 @@
       <option name="presentableId" value="Default" />
       <updated>1583336360263</updated>
       <workItem from="1583336362583" duration="13740000" />
-      <workItem from="1583407105558" duration="32386000" />
+      <workItem from="1583407105558" duration="32751000" />
+      <workItem from="1583513544730" duration="7681000" />
+      <workItem from="1583528613440" duration="3938000" />
+      <workItem from="1583580238992" duration="3456000" />
     </task>
     <servers />
   </component>

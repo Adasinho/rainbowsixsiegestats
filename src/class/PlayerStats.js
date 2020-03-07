@@ -1,3 +1,5 @@
+import Operators from "../collections/Operators";
+
 class PlayerStats {
     init = (data) => {
         this.found = data.playerfound;
@@ -62,8 +64,8 @@ class PlayerStats {
         this.AS_maxrank = data.data[35];
     };
 
-    getFixedTime = (time) => {
-        return parseInt(time / 3600);
+    getFixedTime = () => {
+        return parseInt(this.rankedTimePlayed / 3600);
     }
 }
 export default PlayerStats;

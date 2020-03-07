@@ -7,6 +7,7 @@ import PlayerStats from "../class/PlayerStats";
 import {useDependency} from "../Hooks/useDependency";
 import ClipLoader from "react-spinners/ClipLoader";
 import Window from "./Window";
+import Operators from "../collections/Operators";
 
 const UserComponent = () => {
     let {userId} = useParams();
@@ -30,9 +31,10 @@ const UserComponent = () => {
 
     const playerStatsSection = () => {
         let window1 = new Map().set("Wins", player.rankedWins).set("Losses", player.rankedLosses)
-            .set("Time played", `${player.getFixedTime(player.rankedTimePlayed)}h`).set("Kills", player.rankedKills).set("Deaths", player.rankedDeaths);
+            .set("Time played", `${player.getFixedTime()}h`).set("Kills", player.rankedKills).set("Deaths", player.rankedDeaths);
         let window2 = new Map().set("Current Level", player.level).set("Current MMR", player.currentMmr);
-        let window3 = new Map().set("Attacker", player.favAttacker).set("Defender", player.favDefender);
+        let window3 = new Map().set("Attacker", `${Operators.getOperatorNameById(player.favAttacker)}`)
+            .set("Defender", Operators.getOperatorNameById(player.favDefender));
         let window4 = new Map().set("Visitors", player.visitors);
 
         return (

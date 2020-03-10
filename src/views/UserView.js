@@ -1,21 +1,24 @@
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {useParams, Switch, Route, useRouteMatch} from "react-router-dom";
 
 import axios from "axios";
 
 import {useDependency} from "../Hooks/useDependency";
 import ClipLoader from "react-spinners/ClipLoader";
-import Window from "./Window";
+import Window from "../components/Window";
 import Operators from "../collections/Operators";
+import SeasonsView from "./SeasonsView";
+import UserNavView from "./UserNavView";
 
-const UserComponent = () => {
+const UserView = () => {
     let {userId} = useParams();
+    let { path, url } = useRouteMatch();
 
     const [player, setPlayer] = useState("");
     const [dependency, dAdd, dDelete] = useDependency();
 
     useEffect(() => {
-        const apiPath = "http://rmas.pl/r6api/user/";
+        const apiPath = `${process.env.REACT_APP_API_DOMAIN}/user/`;
         const platform = "uplay/";
         dAdd();
 
@@ -27,33 +30,6 @@ const UserComponent = () => {
             })
     }, []);
 
-    const playerStatsSection = () => {
-        let window1 = new Map()
-            .set("Wins", player.rankedWins)
-            .set("Losses", player.rankedLosses)
-            .set("Time played", `${player.getFixedTime()}h`)
-            .set("Kills", player.rankedKills)
-            .set("Deaths", player.rankedDeaths);
-        let window2 = new Map().set("Current Level", player.level).set("Current MMR", player.currentMmr);
-        let window3 = new Map().set("Attacker", `${Operators.getOperatorNameById(player.favAttacker)}`)
-            .set("Defender", Operators.getOperatorNameById(player.favDefender));
-        let window4 = new Map().set("Visitors", player.visitors);
-
-        return (
-            <section>
-                <div className={"container"}>
-                    <div className={"player-name"}>{player.name}</div>
-                    <div className={"row"}>
-                        <Window title={"Ranked"} params={window1} col={12}/>
-                        <Window title={"More Ranked Stats"} params={window2} col={6}/>
-                        <Window title={"Favorite operators"} params={window3} col={6}/>
-                        <Window title={""} params={window4} col={12}/>
-                    </div>
-                </div>
-            </section>
-        )
-    };
-
     const loadingSection = () => {
         return (
             <div className={"loading"}>
@@ -62,7 +38,7 @@ const UserComponent = () => {
         );
     };
 
-    const test = () => {
+    const playerStats = () => {
         const overallWindow = player ? {
             "Time Played": (player.pvp.general.playtime / 3600).toFixed(2) + "h",
             "Matches Played": player.pvp.general.matches,
@@ -99,8 +75,6 @@ const UserComponent = () => {
             "Headshot %": (player.pvp.general.headshots / player.pvp.general.kills * 100).toFixed(2) + "%"
         } : null;
 
-        console.log(overallWindow);
-
         return (
             <section>
                 <div className={"container"}>
@@ -115,6 +89,18 @@ const UserComponent = () => {
         );
     };
 
-    return dependency ? loadingSection() : test();
+    return (
+        <>
+            <UserNavView url={url}/>
+            <Switch>
+                <Route exact path={path}>
+                    {dependency ? loadingSection() : playerStats()}
+                </Route>
+                <Route path={`${path}/seasons`}>
+                    <SeasonsView/>
+                </Route>
+            </Switch>
+        </>
+    )
 };
-export default UserComponent;
+export default UserView;

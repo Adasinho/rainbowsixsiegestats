@@ -1,8 +1,6 @@
 import React from "react";
 
 const Window = ({className, title, stats, col}) => {
-    console.log(title);
-
     const statsToItem = (item) => {
         return  (
             <div key={item[0]} className={`item col-${12/col}`}>

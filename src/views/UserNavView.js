@@ -1,21 +1,20 @@
 import React from "react";
-import {useHistory, useLocation} from "react-router-dom";
+import {Link} from "react-router-dom";
 
-const NavView = () => {
-    let history = useHistory();
-    let location = useLocation();
-
-    console.log(location);
-
+const UserNavView = ({url}) => {
     return (
         <nav>
             <div className={"container"}>
                 <div className={"row"}>
-                    <div className={"col-6"} onClick={() => history.push("/")}>Global stats</div>
-                    <div className={"col-6"} onClick={() => history.push("/user")}>Seasons</div>
+                    <div className={"col-6"}>
+                        <Link to={`${url}`}>Global stats</Link>
+                    </div>
+                    <div className={"col-6"}>
+                        <Link to={`${url}/seasons`}>Seasons</Link>
+                    </div>
                 </div>
             </div>
         </nav>
     )
 };
-export default NavView;
+export default UserNavView;

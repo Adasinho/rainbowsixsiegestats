@@ -7,13 +7,13 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './css/theme.css';
 
-import ApplicationView from "./components/ApplicationView";
+import ApplicationView from "./views/ApplicationView";
 
 function App() {
   return (
     <div className="App">
       <Router basename={process.env.PUBLIC_URL}>
-        <ApplicationView/>
+          <ApplicationView/>
       </Router>
     </div>
   );

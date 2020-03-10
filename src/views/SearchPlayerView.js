@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {useHistory, withRouter} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import axios from "axios";
 
 import {useDependency} from "../Hooks/useDependency";
@@ -11,7 +11,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 import "../css/list.css";
 
-const SearchPlayer = ({callback}) => {
+const SearchPlayerView = ({callback}) => {
     const [inputUser, setInputUser] = useState("");
     const [users, setUsers] = useState(null);
 
@@ -95,4 +95,4 @@ const SearchPlayer = ({callback}) => {
         </header>
     );
 };
-export default withRouter(SearchPlayer);
+export default SearchPlayerView;

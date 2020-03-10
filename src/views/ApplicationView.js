@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import SearchPlayer from "./SearchPlayer";
-import UserComponent from "./UserComponent";
-import {Route, Switch, withRouter} from "react-router-dom";
+import {Route, Switch} from "react-router-dom";
+
+import SearchPlayerView from "./SearchPlayerView";
+import UserView from "./UserView";
 
 const ApplicationView = () => {
     const [userId, setUserId] = useState(null);
@@ -13,9 +14,9 @@ const ApplicationView = () => {
 
     return (
         <Switch>
-            <Route exact path={"/"} component={() => <SearchPlayer callback={setUserIdCallback}/>} />
-            <Route path={"/user/:userId"} component={() => <UserComponent userId={userId}/>} />
+            <Route exact path={"/"} component={() => <SearchPlayerView callback={setUserIdCallback}/>} />
+            <Route path={"/user/:userId"} component={() => <UserView userId={userId}/>} />
         </Switch>
     );
 };
-export default withRouter(ApplicationView);
+export default ApplicationView;

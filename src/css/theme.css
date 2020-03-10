@@ -44,7 +44,7 @@ header form {
     background-color: #373d48;
     text-align: left;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .items .item {

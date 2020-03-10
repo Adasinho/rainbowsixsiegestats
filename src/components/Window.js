@@ -1,11 +1,11 @@
 import React from "react";
 
-const Window = ({title, params, col}) => {
+const Window = ({className, title, stats, col}) => {
     console.log(title);
 
-    const paramToItem = (item) => {
+    const statsToItem = (item) => {
         return  (
-            <div key={item[0]} className={"item"}>
+            <div key={item[0]} className={`item col-${12/col}`}>
                 <div className={"prop-name"}>{item[0]}</div>
                 <div className={"prop-value"}>{item[1]}</div>
             </div>
@@ -13,10 +13,10 @@ const Window = ({title, params, col}) => {
     };
 
     return (
-        <div className={`col-${col} window`}>
+        <div className={`window ${className}`}>
             <div className={"title"}>{title}</div>
             <div className={"items"}>
-                {params ? Array.from(params).map(paramToItem) : null}
+                {stats ? Object.entries(stats).map(statsToItem) : null}
             </div>
         </div>
     )

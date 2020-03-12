@@ -28,8 +28,6 @@ const SearchPlayerView = ({callback}) => {
             .then((response) => {
                 console.log(response);
                 setUsers(response.data.results);
-                //callback(2);
-                //history.push("/user");
             })
             .finally((response) => {
                 dDelete();

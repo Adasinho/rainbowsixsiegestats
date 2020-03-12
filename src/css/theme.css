@@ -1,5 +1,4 @@
 section {
-    background-color: #282c34;
     color: snow;
     min-height: 100vh;
 }
@@ -18,6 +17,23 @@ header input {
 header form {
     display: flex;
     align-items: center;
+}
+
+nav {
+    background-color: #282c34;
+    color: snow;
+    padding: 10px;
+}
+
+nav a {
+    font-size: 20px;
+    color: snow;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #61dafb;
+    text-decoration: none;
 }
 
 .justify-center {
@@ -59,4 +75,8 @@ header form {
 
 .items .item .prop-value {
     font-size: 32px;
+}
+
+.seasonsView {
+    padding: 15px 0;
 }

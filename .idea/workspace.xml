@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be78a70-1e83-4716-9db1-ef6ccf942051" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/css/components/seasonLabel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SeasonLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SeasonLabel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ApplicationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ApplicationView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SearchPlayerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPlayerView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SeasonsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SeasonsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -26,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../antyki-webpage" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -90,7 +100,9 @@
       <workItem from="1583513544730" duration="7681000" />
       <workItem from="1583528613440" duration="3938000" />
       <workItem from="1583580238992" duration="19272000" />
-      <workItem from="1583754839849" duration="37543000" />
+      <workItem from="1583754839849" duration="38815000" />
+      <workItem from="1583943821447" duration="4968000" />
+      <workItem from="1583953283144" duration="13895000" />
     </task>
     <servers />
   </component>

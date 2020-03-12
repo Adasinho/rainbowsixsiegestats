@@ -1,0 +1,71 @@
+.season-label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #434a56;
+    color: snow;
+    z-index: 10;
+}
+
+.season-label .head {
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #373d48;
+    border-bottom: #61dafb 2px solid;
+}
+
+.season-label .head .left {
+    align-items: center;
+    display: flex;
+}
+
+.season-label .head .right {
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+.season-label .head .right .arrow {
+}
+
+.season-label .head .right .arrow:hover {
+    color: #61dafb;
+}
+
+.season-label .head .rank-img {
+    height: 50px;
+}
+
+.season-label .body {
+    transition: all .4s ease-out;
+    height: auto;
+    opacity: 1;
+    z-index: 5;
+}
+
+.season-label .body.active {
+    height: 0;
+}
+
+.season-label .body .region-stats {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.season-label .body .property {
+    display: flex;
+    justify-content: space-between;
+}
+
+.season-label .body .property .key {
+    text-transform: uppercase;
+}
+
+.season-label .body .property .value {
+}

@@ -6,7 +6,6 @@ import axios from "axios";
 import {useDependency} from "../Hooks/useDependency";
 import ClipLoader from "react-spinners/ClipLoader";
 import Window from "../components/Window";
-import Operators from "../collections/Operators";
 import SeasonsView from "./SeasonsView";
 import UserNavView from "./UserNavView";
 
@@ -15,9 +14,10 @@ const UserView = () => {
     let { path, url } = useRouteMatch();
 
     const [player, setPlayer] = useState("");
+    const [seasons, setSeasons] = useState("");
     const [dependency, dAdd, dDelete] = useDependency();
 
-    useEffect(() => {
+    const getPlayerStats = () => {
         const apiPath = `${process.env.REACT_APP_API_DOMAIN}/user/`;
         const platform = "uplay/";
         dAdd();
@@ -28,6 +28,24 @@ const UserView = () => {
                 console.log(response.data);
                 setPlayer(response.data);
             })
+    };
+
+    const getSeasonsStats = () => {
+        const apiPath = `${process.env.REACT_APP_API_DOMAIN}/rank/all/uplay/${userId}`;
+        console.log(apiPath);
+        dAdd();
+
+        axios.get(apiPath)
+            .then(res => {
+                dDelete();
+                console.log(res.data[0]);
+                setSeasons(res.data[0].seasons);
+            });
+    };
+
+    useEffect(() => {
+        getPlayerStats();
+        getSeasonsStats();
     }, []);
 
     const loadingSection = () => {
@@ -97,7 +115,7 @@ const UserView = () => {
                     {dependency ? loadingSection() : playerStats()}
                 </Route>
                 <Route path={`${path}/seasons`}>
-                    <SeasonsView/>
+                    <SeasonsView seasons={seasons}/>
                 </Route>
             </Switch>
         </>

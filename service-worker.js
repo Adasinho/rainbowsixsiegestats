@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/rainbowsixsiegestats/precache-manifest.340e06c756793e171b8a26b69db91bef.js"
+  "/rainbowsixsiegestats/precache-manifest.a726c019d093e156c69cf2035c8e7691.js"
 );
 
 self.addEventListener('message', (event) => {

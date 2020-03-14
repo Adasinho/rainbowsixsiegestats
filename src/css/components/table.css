@@ -1,0 +1,43 @@
+@import "./../colors.css";
+
+.table {
+    width: 100%;
+    border: solid 1px var(--border-color);
+    background-color: var(--sec-bg-color);
+}
+
+.firstField {
+    text-align: left;
+    font-weight: bold;
+}
+
+tr {
+    text-align: right;
+    transition: background-color .1s ease-out;
+}
+
+tr:hover {
+    background-color: var(--primary-light-color);
+    transition: background-color .1s ease-in;
+}
+
+th:first-child:hover {
+    cursor: auto;
+    color: var(--light-font-color);
+}
+
+th {
+    background-color: var(--main-head-color);
+    color: var(--light-font-color);
+    cursor: pointer;
+    transition: color .1s ease-out;
+}
+
+th:hover {
+    color: var(--primary-color);
+    transition: color .1s ease-in;
+}
+
+td {
+    text-align: right;
+}

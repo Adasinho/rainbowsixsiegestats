@@ -68,7 +68,7 @@ const SeasonLabel = ({name, regions}) => {
     };
 
     return (
-        <div className={"season-label"}>
+        <div className={"season-label col-12"}>
             <div className={"head"} onClick={handleClick}>
                 <div className={"left"}>
                     <img src={bestRank.image} className={"rank-img"} alt={bestRank.name}/>

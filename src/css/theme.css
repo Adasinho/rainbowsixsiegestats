@@ -1,11 +1,17 @@
+@import "colors.css";
+
+body {
+    background-color: var(--main-bg-color);
+}
+
 section {
-    color: snow;
-    min-height: 100vh;
+    color: black;
+    min-height: calc(100vh - 15px);
+    padding-top: 15px;
 }
 
 section .player-name {
     font-size: 28px;
-    padding: 20px 0;
 }
 
 header input {
@@ -20,20 +26,22 @@ header form {
 }
 
 nav {
-    background-color: #282c34;
-    color: snow;
+    background-color: var(--nav-color);
+    color: var(--light-font-color);
     padding: 10px;
 }
 
 nav a {
     font-size: 20px;
-    color: snow;
+    color: var(--light-font-color);
     text-decoration: none;
+    transition: color .1s ease-out;
 }
 
 nav a:hover {
-    color: #61dafb;
+    color: var(--primary-color);
     text-decoration: none;
+    transition: color .1s ease-in;
 }
 
 .justify-center {
@@ -46,18 +54,20 @@ nav a:hover {
 
 .window {
     margin: 10px 0;
+    border: solid 1px var(--border-color);
 }
 
 .window .title {
-    background-color: #434a56;
+    background-color: var(--main-head-color);
+    color: var(--light-font-color);
     text-align: left;
     font-size: 32px;
-    font-weight: 100;
     padding: 10px 20px;
+    border-bottom: solid 2px var(--primary-color);
 }
 
 .items {
-    background-color: #373d48;
+    background-color: var(--light-font-color);
     text-align: left;
     display: flex;
     flex-wrap: wrap;
@@ -68,15 +78,16 @@ nav a:hover {
 }
 
 .items .item .prop-name {
-    color: silver;
-    font-size: 16px;
+    color: var(--dark-font-color);
+    font-size: 14px;
     text-transform: uppercase;
 }
 
 .items .item .prop-value {
     font-size: 32px;
+    line-height: 1;
 }
 
 .seasonsView {
-    padding: 15px 0;
+    padding-top: 15px;
 }

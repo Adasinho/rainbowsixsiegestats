@@ -8,6 +8,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import Window from "../components/Window";
 import SeasonsView from "./SeasonsView";
 import UserNavView from "./UserNavView";
+import WeaponsView from "./WeaponsView";
 
 const UserView = () => {
     let {userId} = useParams();
@@ -15,6 +16,7 @@ const UserView = () => {
 
     const [player, setPlayer] = useState("");
     const [seasons, setSeasons] = useState("");
+    const [weapons, setWeapons] = useState("");
     const [dependency, dAdd, dDelete] = useDependency();
 
     const getPlayerStats = () => {
@@ -27,6 +29,7 @@ const UserView = () => {
                 dDelete();
                 console.log(response.data);
                 setPlayer(response.data);
+                setWeapons(response.data.pvp.weapons);
             })
     };
 
@@ -47,14 +50,6 @@ const UserView = () => {
         getPlayerStats();
         getSeasonsStats();
     }, []);
-
-    const loadingSection = () => {
-        return (
-            <div className={"loading"}>
-                <ClipLoader size={50} color={"#09d3ac"} />
-            </div>
-        );
-    };
 
     const playerStats = () => {
         const overallWindow = player ? {
@@ -107,16 +102,21 @@ const UserView = () => {
         );
     };
 
+    const loadingSection = () => {
+        return (
+            <div className={"loading"}>
+                <ClipLoader size={50} color={"#09d3ac"} />
+            </div>
+        );
+    };
+
     return (
         <>
             <UserNavView url={url}/>
             <Switch>
-                <Route exact path={path}>
-                    {dependency ? loadingSection() : playerStats()}
-                </Route>
-                <Route path={`${path}/seasons`}>
-                    <SeasonsView seasons={seasons}/>
-                </Route>
+                <Route exact path={path} component={() => dependency ? loadingSection() : playerStats()}/>
+                <Route path={`${path}/seasons`} component={() => <SeasonsView seasons={seasons}/>}/>
+                <Route path={`${path}/weapons`} component={() => <WeaponsView weapons={weapons}/>}/>
             </Switch>
         </>
     )

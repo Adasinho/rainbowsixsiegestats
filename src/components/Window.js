@@ -11,10 +11,12 @@ const Window = ({className, title, stats, col}) => {
     };
 
     return (
-        <div className={`window ${className}`}>
-            <div className={"title"}>{title}</div>
-            <div className={"items"}>
-                {stats ? Object.entries(stats).map(statsToItem) : null}
+        <div className={className}>
+            <div className={"window"}>
+                <div className={"title"}>{title}</div>
+                <div className={"items"}>
+                    {stats ? Object.entries(stats).map(statsToItem) : null}
+                </div>
             </div>
         </div>
     )

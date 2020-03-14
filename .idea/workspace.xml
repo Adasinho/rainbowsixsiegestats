@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be78a70-1e83-4716-9db1-ef6ccf942051" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/css/components/seasonLabel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/colors.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/components/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/WeaponsView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SeasonLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SeasonLabel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/components/seasonLabel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/seasonLabel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ApplicationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ApplicationView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SearchPlayerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPlayerView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/SeasonsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SeasonsView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserNavView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserNavView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserView.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,10 +32,15 @@
   </component>
   <component name="ProjectId" id="1Yfayxprb8L7jzgEXf8QKTr25vM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../antyki-webpage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../R6API_SERVER" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -46,6 +50,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -57,18 +62,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Projekty WWW\rainbowsixsiegestats\src\Hooks" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -102,7 +95,13 @@
       <workItem from="1583580238992" duration="19272000" />
       <workItem from="1583754839849" duration="38815000" />
       <workItem from="1583943821447" duration="4968000" />
-      <workItem from="1583953283144" duration="13895000" />
+      <workItem from="1583953283144" duration="15018000" />
+      <workItem from="1583974386290" duration="96000" />
+      <workItem from="1584018816485" duration="538000" />
+      <workItem from="1584049307716" duration="1987000" />
+      <workItem from="1584130835108" duration="348000" />
+      <workItem from="1584132266220" duration="1047000" />
+      <workItem from="1584133348773" duration="14700000" />
     </task>
     <servers />
   </component>
@@ -121,5 +120,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2880" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1584133300398">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state x="2880" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.2560.1040@1920.0.2560.1040" timestamp="1584133300398" />
+    <state x="2980" y="275" key="FileChooserDialogImpl" timestamp="1584133018545">
+      <screen x="1920" y="0" width="2560" height="1040" />
+    </state>
+    <state x="2980" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.2560.1040@1920.0.2560.1040" timestamp="1584133018545" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1584132686462">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.2560.1040@0.0.1920.1040" timestamp="1584132686462" />
   </component>
 </project>

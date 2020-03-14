@@ -1,11 +1,11 @@
+@import "./../colors.css";
+
 .season-label {
     display: flex;
     flex-direction: column;
     text-align: left;
     width: 100%;
     margin: 10px 0;
-    background-color: #434a56;
-    color: snow;
     z-index: 10;
 }
 
@@ -16,8 +16,9 @@
     display: flex;
     padding: 10px;
     font-size: 24px;
-    background-color: #373d48;
-    border-bottom: #61dafb 2px solid;
+    color: var(--light-font-color);
+    background-color: var(--main-head-color);
+    border-bottom: solid 2px var(--primary-color);
 }
 
 .season-label .head .left {
@@ -34,7 +35,7 @@
 }
 
 .season-label .head .right .arrow:hover {
-    color: #61dafb;
+    color: var(--primary-color);
 }
 
 .season-label .head .rank-img {
@@ -42,6 +43,8 @@
 }
 
 .season-label .body {
+    background-color: var(--sec-bg-color);
+    color: var(--dark-font-color);
     transition: all .4s ease-out;
     height: auto;
     opacity: 1;

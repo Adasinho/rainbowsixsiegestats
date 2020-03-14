@@ -1,19 +1,25 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
+import {useTableController} from "../Hooks/useTableController";
 
 import "./../css/components/table.css";
 
 const Table = ({attributes, records, firstFieldAttribute}) => {
-    const [columns, setColumns] = useState(0);
-    const [rows, setRows] = useState(0);
+    const [sortBy] = useTableController(records, records.length, attributes.length);
+    const [sortedAttribute, setSortedAttribute] = useState(-1);
 
-    useEffect(() => {
-        setColumns(attributes.length);
-        setRows(records.length);
-    }, []);
+    const handleClick = key => {
+        console.log("Clicked!");
+        sortBy(key);
+        setSortedAttribute(key);
+    };
 
     const attributeToItem = (key, attribute) => {
-        if(firstFieldAttribute) return <th className={key === 0 ? "firstField" : null} key={attribute}>{attribute}</th>
-        else return <th key={attribute}>{attribute}</th>
+        if(firstFieldAttribute) {
+            if(!key) return <th className={"firstField"} key={key}>{attribute}</th>
+            else return <th className={sortedAttribute === key ? "clicked" : null}
+                            key={key} onClick={() => handleClick(key)}>{attribute}</th>
+        } else return <th className={sortedAttribute === key ? "clicked" : null}
+                          key={key} onClick={() => handleClick(key)}>{attribute}</th>
     };
 
     const headGenerator = () => {
@@ -40,9 +46,6 @@ const Table = ({attributes, records, firstFieldAttribute}) => {
             <tbody>{records.map(trToItem)}</tbody>
         )
     };
-
-    console.log(columns);
-    console.log(rows);
 
     return (
         <table className={"table"}>

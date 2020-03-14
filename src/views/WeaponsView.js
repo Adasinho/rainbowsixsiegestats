@@ -10,16 +10,22 @@ const WeaponsView = ({weapons}) => {
         setWeaponsList(weaponsArray);
     }, []);
 
-    return (
-        <section>
-            <div className={"container"}>
-                <div className={"row"}>
-                    <div className={"col-12"}>
-                        <Table attributes={["Weapon", "Kills", "Deaths", "Headshots", "Bullets Connected", "Time Chosen"]} records={weaponsList} firstFieldAttribute={true}/>
+    console.log(weaponsList);
+
+    if(weaponsList.length) {
+        return (
+            <section>
+                <div className={"container"}>
+                    <div className={"row"}>
+                        <div className={"col-12"}>
+                            <Table
+                                attributes={["Weapon", "Kills", "Deaths", "Headshots", "Bullets Connected", "Time Chosen"]}
+                                records={weaponsList} firstFieldAttribute={true}/>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    )
+            </section>
+        )
+    } else return null;
 };
 export default WeaponsView;

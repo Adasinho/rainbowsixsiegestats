@@ -31,6 +31,10 @@ const UserView = () => {
                 setPlayer(response.data);
                 setWeapons(response.data.pvp.weapons);
             })
+            .catch(res => {
+                dDelete();
+                console.log("Can't get data about Player from Ubi API");
+            })
     };
 
     const getSeasonsStats = () => {
@@ -43,7 +47,11 @@ const UserView = () => {
                 dDelete();
                 console.log(res.data[0]);
                 setSeasons(res.data[0].seasons);
-            });
+            })
+            .catch(res => {
+                dDelete();
+                console.log("Can't get data about Seasons from Ubi API");
+            })
     };
 
     useEffect(() => {
@@ -115,8 +123,8 @@ const UserView = () => {
             <UserNavView url={url}/>
             <Switch>
                 <Route exact path={path} component={() => dependency ? loadingSection() : playerStats()}/>
-                <Route path={`${path}/seasons`} component={() => <SeasonsView seasons={seasons}/>}/>
-                <Route path={`${path}/weapons`} component={() => <WeaponsView weapons={weapons}/>}/>
+                <Route path={`${path}/seasons`} component={() => dependency ? loadingSection() : <SeasonsView seasons={seasons}/>}/>
+                <Route path={`${path}/weapons`} component={() => dependency ? loadingSection() : <WeaponsView weapons={weapons}/>}/>
             </Switch>
         </>
     )

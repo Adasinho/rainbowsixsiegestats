@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be78a70-1e83-4716-9db1-ef6ccf942051" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/colors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/components/table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/WeaponsView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Hooks/useTableController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SeasonLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SeasonLabel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/components/seasonLabel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/seasonLabel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserNavView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserNavView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/components/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/table.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/WeaponsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WeaponsView.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -40,7 +35,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../R6API_SERVER" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -101,7 +96,8 @@
       <workItem from="1584049307716" duration="1987000" />
       <workItem from="1584130835108" duration="348000" />
       <workItem from="1584132266220" duration="1047000" />
-      <workItem from="1584133348773" duration="14700000" />
+      <workItem from="1584133348773" duration="15593000" />
+      <workItem from="1584187799719" duration="12798000" />
     </task>
     <servers />
   </component>

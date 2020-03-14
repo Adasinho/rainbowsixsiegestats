@@ -13,12 +13,12 @@
 
 tr {
     text-align: right;
-    transition: background-color .1s ease-out;
+    transition: background-color .05s ease-out;
 }
 
 tr:hover {
     background-color: var(--primary-light-color);
-    transition: background-color .1s ease-in;
+    transition: background-color .05s ease-in;
 }
 
 th:first-child:hover {
@@ -30,12 +30,16 @@ th {
     background-color: var(--main-head-color);
     color: var(--light-font-color);
     cursor: pointer;
-    transition: color .1s ease-out;
+    transition: color .05s ease-out;
 }
 
 th:hover {
     color: var(--primary-color);
-    transition: color .1s ease-in;
+    transition: color .05s ease-in;
+}
+
+th.clicked {
+    color: var(--primary-color);
 }
 
 td {

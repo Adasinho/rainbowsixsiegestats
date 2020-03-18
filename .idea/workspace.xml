@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be78a70-1e83-4716-9db1-ef6ccf942051" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Hooks/useTableController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/components/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/table.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/WeaponsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WeaponsView.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +31,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../R6API_SERVER" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -97,7 +93,9 @@
       <workItem from="1584130835108" duration="348000" />
       <workItem from="1584132266220" duration="1047000" />
       <workItem from="1584133348773" duration="15593000" />
-      <workItem from="1584187799719" duration="12798000" />
+      <workItem from="1584187799719" duration="14146000" />
+      <workItem from="1584462830866" duration="606000" />
+      <workItem from="1584524716735" duration="2703000" />
     </task>
     <servers />
   </component>
@@ -122,10 +120,12 @@
       <screen x="1920" y="0" width="2560" height="1040" />
     </state>
     <state x="2880" y="248" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/1920.0.2560.1040@1920.0.2560.1040" timestamp="1584133300398" />
-    <state x="2980" y="275" key="FileChooserDialogImpl" timestamp="1584133018545">
-      <screen x="1920" y="0" width="2560" height="1040" />
+    <state x="1060" y="275" key="FileChooserDialogImpl" timestamp="1584526508834">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="2980" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.2560.1040@1920.0.2560.1040" timestamp="1584133018545" />
+    <state x="795" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584462834707" />
+    <state x="1060" y="275" key="FileChooserDialogImpl/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1584526508834" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1584132686462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

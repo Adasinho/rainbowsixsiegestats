@@ -37,6 +37,16 @@ const UserView = () => {
             })
     };
 
+    const sortSeasonsOrderByNewer = table => {
+        let sortedTable = Object.values(table).sort((a, b) => {
+            return b.id - a.id;
+        });
+
+        console.log(sortedTable);
+
+        return sortedTable;
+    };
+
     const getSeasonsStats = () => {
         const apiPath = `${process.env.REACT_APP_API_DOMAIN}/rank/all/uplay/${userId}`;
         console.log(apiPath);
@@ -46,7 +56,9 @@ const UserView = () => {
             .then(res => {
                 dDelete();
                 console.log(res.data[0]);
-                setSeasons(res.data[0].seasons);
+                let sortedTable = sortSeasonsOrderByNewer(res.data[0].seasons);
+                setSeasons(sortedTable);
+
             })
             .catch(res => {
                 dDelete();

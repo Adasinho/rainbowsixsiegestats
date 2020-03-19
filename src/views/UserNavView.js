@@ -6,13 +6,16 @@ const UserNavView = ({url}) => {
         <nav>
             <div className={"container"}>
                 <div className={"row"}>
-                    <div className={"col-4"}>
-                        <Link to={`${url}`}>Global stats</Link>
+                    <div className={"col-3"}>
+                        <Link to={`${url}`}>Overall</Link>
                     </div>
-                    <div className={"col-4"}>
+                    <div className={"col-3"}>
                         <Link to={`${url}/seasons`}>Seasons</Link>
                     </div>
-                    <div className={"col-4"}>
+                    <div className={"col-3"}>
+                        <Link to={`${url}/operators`}>Operators</Link>
+                    </div>
+                    <div className={"col-3"}>
                         <Link to={`${url}/weapons`}>Weapons</Link>
                     </div>
                 </div>

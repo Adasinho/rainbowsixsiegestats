@@ -3,7 +3,7 @@ import {useTableController} from "../Hooks/useTableController";
 
 import "./../css/components/table.css";
 
-const Table = ({attributes, records, firstFieldAttribute}) => {
+const Table = ({id, attributes, records, firstFieldAttribute}) => {
     const [sortBy] = useTableController(records, records.length, attributes.length);
     const [sortedAttribute, setSortedAttribute] = useState(-1);
 
@@ -33,25 +33,28 @@ const Table = ({attributes, records, firstFieldAttribute}) => {
     };
 
     const tdToItem = (key, td) => {
-        if(firstFieldAttribute) return <td className={key === 0 ? "firstField" : null}>{td}</td>
+        if(firstFieldAttribute) return <td key={key} className={key === 0 ? "firstField" : null}>{td}</td>
         else return <td>{td}</td>
     };
 
-    const trToItem = tr => {
-        return <tr>{Object.values(tr).map((value, key) => tdToItem(key, value))}</tr>
+    const trToItem = (key, tr) => {
+        return <tr key={`tr-${key}`}>{Object.values(tr).map((value, key) => tdToItem(key, value))}</tr>
     };
 
     const bodyGenerator = () => {
+        console.log(records);
         return (
-            <tbody>{records.map(trToItem)}</tbody>
+            <tbody>{records.map((value, key) => trToItem(key, value))}</tbody>
         )
     };
 
     return (
-        <table className={"table"}>
-            {headGenerator()}
-            {bodyGenerator()}
-        </table>
+        <div className={"responsive-overflow-wrapper"}>
+            <table key={id} className={"table"}>
+                {headGenerator()}
+                {bodyGenerator()}
+            </table>
+        </div>
     )
 };
 export default Table;

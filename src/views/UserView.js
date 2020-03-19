@@ -9,6 +9,7 @@ import Window from "../components/Window";
 import SeasonsView from "./SeasonsView";
 import UserNavView from "./UserNavView";
 import WeaponsView from "./WeaponsView";
+import OperatorsView from "./OperatorsView";
 
 const UserView = () => {
     let {userId} = useParams();
@@ -17,7 +18,22 @@ const UserView = () => {
     const [player, setPlayer] = useState("");
     const [seasons, setSeasons] = useState("");
     const [weapons, setWeapons] = useState("");
+    const [defenders, setDefenders] = useState([]);
+    const [attackers, setAttackers] = useState([]);
     const [dependency, dAdd, dDelete] = useDependency();
+
+    const getOperatorsByRole = (operators, role) => {
+        let operatorsCopy = Object.assign({}, operators);
+        let val = Object.values(operatorsCopy).filter(operator => operator.role === role);
+        val.forEach(attacker => {
+            delete attacker.badge;
+            delete attacker.role;
+            delete attacker.ctu;
+            delete attacker.gadget;
+        });
+
+        return val;
+    };
 
     const getPlayerStats = () => {
         const apiPath = `${process.env.REACT_APP_API_DOMAIN}/user/`;
@@ -26,10 +42,12 @@ const UserView = () => {
 
         axios.get(apiPath + platform + userId)
             .then(response => {
-                dDelete();
                 console.log(response.data);
                 setPlayer(response.data);
                 setWeapons(response.data.pvp.weapons);
+                setDefenders(getOperatorsByRole(response.data.pvp.operators, "defender"));
+                setAttackers(getOperatorsByRole(response.data.pvp.operators, "attacker"));
+                dDelete();
             })
             .catch(res => {
                 dDelete();
@@ -54,10 +72,10 @@ const UserView = () => {
 
         axios.get(apiPath)
             .then(res => {
-                dDelete();
                 console.log(res.data[0]);
                 let sortedTable = sortSeasonsOrderByNewer(res.data[0].seasons);
                 setSeasons(sortedTable);
+                dDelete();
 
             })
             .catch(res => {
@@ -137,6 +155,7 @@ const UserView = () => {
                 <Route exact path={path} component={() => dependency ? loadingSection() : playerStats()}/>
                 <Route path={`${path}/seasons`} component={() => dependency ? loadingSection() : <SeasonsView seasons={seasons}/>}/>
                 <Route path={`${path}/weapons`} component={() => dependency ? loadingSection() : <WeaponsView weapons={weapons}/>}/>
+                <Route path={`${path}/operators`} component={() => dependency ? loadingSection() : <OperatorsView attackers={attackers} defenders={defenders}/>}/>
             </Switch>
         </>
     )

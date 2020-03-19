@@ -22,7 +22,7 @@ const reducer = (state, action) => {
 };
 
 const useTableController = (records, rows, columns) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, {sortedState: [], sortedRecords: []});
 
     useEffect(() => {
         let tab = [];

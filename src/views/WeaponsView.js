@@ -10,17 +10,18 @@ const WeaponsView = ({weapons}) => {
         setWeaponsList(weaponsArray);
     }, []);
 
-    console.log(weaponsList);
-
     if(weaponsList.length) {
+        console.log(weaponsList);
         return (
             <section>
                 <div className={"container"}>
                     <div className={"row"}>
-                        <div className={"col-12"}>
+                        <div className={"row-element"}>
                             <Table
+                                id={"weapons"}
                                 attributes={["Weapon", "Kills", "Deaths", "Headshots", "Bullets Connected", "Time Chosen"]}
-                                records={weaponsList} firstFieldAttribute={true}/>
+                                records={weaponsList}
+                                firstFieldAttribute={true}/>
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,21 @@
 @import "./../colors.css";
 
+.responsive-overflow-wrapper {
+    overflow: auto;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+}
+
 .table {
     width: 100%;
     border: solid 1px var(--border-color);
     background-color: var(--sec-bg-color);
+    overflow: hidden;
+}
+
+.table td {
+    padding: 0.5rem 0.8rem;
 }
 
 .firstField {

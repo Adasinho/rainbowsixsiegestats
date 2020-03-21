@@ -9,8 +9,8 @@
 
 .table {
     width: 100%;
-    border: solid 1px var(--border-color);
-    background-color: var(--sec-bg-color);
+    border: solid 1px var(--light-border-color);
+    background-color: var(--light-objects-bg-color);
     overflow: hidden;
 }
 
@@ -39,14 +39,14 @@ th:first-child:hover {
 }
 
 th {
-    background-color: var(--main-head-color);
+    background-color: var(--table-head-color);
     color: var(--light-font-color);
     cursor: pointer;
     transition: color .05s ease-out;
 }
 
 th:hover {
-    color: var(--primary-color);
+    color: var(--primary-light-color);
     transition: color .05s ease-in;
 }
 

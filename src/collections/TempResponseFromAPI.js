@@ -1,4 +1,4 @@
-const PlayerStats = {
+export const PlayerStats = {
     "id": "77527ba5-e9e7-427f-8b6e-1d92956a1e41",
     "pvp": {
         "weapons": {
@@ -4752,4 +4752,73 @@ const PlayerStats = {
     }
 };
 
-export default PlayerStats;
+export const SeasonsStats = {
+    '17': {
+        id: 17,
+        name: 'Shifting Tides',
+        regions: {
+            emea: {
+                region: 'emea',
+                skillMean: 30.663307433,
+                skillStdev: 7.5624420961,
+                current: {
+                    name: 'Gold 4',
+                    id: 0,
+                    mmr: 3066,
+                    image: 'https://cdn.r6stats.com/seasons/ranks/gold-4.svg'
+                },
+                max: {
+                    name: 'Unranked',
+                    id: 0,
+                    mmr: 0,
+                    image: 'https://cdn.r6stats.com/seasons/ranks/gold-4.svg'
+                },
+                lastMatch: { mmrChange: 0, won: false, skillStdevChange: -0.0048172252 },
+                previousMmr: 0,
+                nextMmr: 0,
+                topRankPosition: 0,
+                kills: 23,
+                deaths: 17,
+                wins: 4,
+                losses: 1,
+                matches: 5,
+                abandons: 0,
+                updateTime: '1970-01-01T00:00:00+00:00'
+            }
+        }
+    },
+    '16': {
+        id: 16,
+        name: 'Void Edge',
+        regions: {
+            ncsa: {
+                region: 'ncsa',
+                skillMean: 30.663307433,
+                skillStdev: 7.5624420961,
+                current: {
+                    name: 'Platinum 2',
+                    id: 0,
+                    mmr: 3743,
+                    image: 'https://cdn.r6stats.com/seasons/ranks/platinum-2.svg'
+                },
+                max: {
+                    name: 'Unranked',
+                    id: 0,
+                    mmr: 0,
+                    image: 'https://cdn.r6stats.com/seasons/ranks/platinum-2.svg'
+                },
+                lastMatch: { mmrChange: 0, won: false, skillStdevChange: -0.0048172252 },
+                previousMmr: 0,
+                nextMmr: 0,
+                topRankPosition: 0,
+                kills: 53,
+                deaths: 37,
+                wins: 7,
+                losses: 4,
+                matches: 11,
+                abandons: 0,
+                updateTime: '1970-01-01T00:00:00+00:00'
+            }
+        }
+    }
+};

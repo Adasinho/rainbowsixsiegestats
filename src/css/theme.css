@@ -21,16 +21,21 @@ section#operators .title {
     cursor: pointer;
     width: 100%;
     text-transform: uppercase;
-    border: solid 2px var(--border-color);
-    background-color: var(--sec-bg-color);
+    border: solid 2px var(--light-border-color);
+    background-color: var(--light-objects-bg-color);
+    transition: all .1s ease-out;
+}
+
+section#operators .title:hover {
+    background-color: var(--primary-color);
+    color: var(--light-font-color);
 }
 
 section#operators .title.active {
-    background-color: var(--sec-bg-color);
     border: solid 2px var(--primary-color);
 }
 
-section#operators .nav-section {
+section#operators .nav-section-tabs {
     display: flex;
     justify-content: space-around;
 }
@@ -60,7 +65,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--primary-color);
+    color: var(--primary-light-color);
     text-decoration: none;
     transition: color .1s ease-in;
 }
@@ -75,11 +80,11 @@ nav a:hover {
 
 .window {
     margin: 10px 0;
-    border: solid 1px var(--border-color);
+    border: solid 1px var(--light-border-color);
 }
 
 .window .title {
-    background-color: var(--main-head-color);
+    background-color: var(--table-head-color);
     color: var(--light-font-color);
     text-align: left;
     font-size: 32px;
@@ -116,4 +121,13 @@ nav a:hover {
 .row-element {
     position: relative;
     width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.dark-background {
+    background-color: var(--dark-bg-color);
+    color: var(--light-font-color);
 }

@@ -17,7 +17,7 @@
     padding: 10px;
     font-size: 24px;
     color: var(--light-font-color);
-    background-color: var(--main-head-color);
+    background-color: var(--table-head-color);
     border-bottom: solid 2px var(--primary-color);
 }
 
@@ -43,7 +43,7 @@
 }
 
 .season-label .body {
-    background-color: var(--sec-bg-color);
+    background-color: var(--light-objects-bg-color);
     color: var(--dark-font-color);
     transition: all .4s ease-out;
     height: auto;

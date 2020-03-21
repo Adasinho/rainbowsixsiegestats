@@ -10,7 +10,7 @@ import SeasonsView from "./SeasonsView";
 import UserNavView from "./UserNavView";
 import WeaponsView from "./WeaponsView";
 import OperatorsView from "./OperatorsView";
-import PlayerStats from "../collections/TempResponseFromAPI";
+import {PlayerStats, SeasonsStats} from "../collections/TempResponseFromAPI";
 
 const UserView = () => {
     let {userId} = useParams();
@@ -85,6 +85,7 @@ const UserView = () => {
             })
             .catch(res => {
                 dDelete();
+                setSeasons(SeasonsStats);
                 console.log("Can't get data about Seasons from Ubi API");
             })
     };

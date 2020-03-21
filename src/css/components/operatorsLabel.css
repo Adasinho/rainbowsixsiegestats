@@ -1,4 +1,13 @@
+:root {
+    --back-button-height: 60px;
+}
+
 .operators-label {
+    position: relative;
+    width: 100%;
+}
+
+.operators-icons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -7,40 +16,41 @@
     padding: 50px 0;
 }
 
-.operator {
+.operators-icons .operator {
     position: relative;
-    width: 90px;
+    width: 110px;
     margin: 5px;
     z-index: 10;
-    border: solid 1px var(--border-color);
-    background-color: var(--main-bg-color);
+    border: solid 1px var(--dark-border-color);
+    background-color: var(--dark-objects-bg-color);
     transition: transform .005s ease-in;
     cursor: pointer;
     overflow: hidden;
 }
 
-.operator:hover {
+.operators-icons .operator:hover {
     transform: scale(1.4, 1.4);
     z-index: 12;
     transition: transform 0.1s ease-out;
     border: solid 1px var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
 }
 
-.operator:hover .badge img {
+.operators-icons .operator:hover .badge img {
     opacity: 0;
     transition: opacity 0s;
 }
 
-.operator:hover .name {
+.operators-icons .operator:hover .name {
     opacity: 1;
 }
 
-.operator:hover img {
+.operators-icons .operator:hover img {
     transform: scale(1.2, 1.2);
     transition: all 2s ease-out;
 }
 
-.operator .badge, .name {
+.operators-icons .operator .badge, .operators-icons .operator .name {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -49,28 +59,96 @@
     font-weight: 500;
 }
 
-.operator .name {
+.operators-icons .operator .name {
     font-size: 12px;
     background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
     width: 100%;
 }
 
-.operator .badge {
+.operators-icons .operator .badge {
     right: 0;
     padding: 0 20px;
 }
 
-.operator .name {
+.operators-icons .operator .name {
     opacity: 0;
     color: whitesmoke;
 }
 
-.operator .badge img {
+.operators-icons .operator .badge img {
     opacity: 1;
     transition: opacity .1s ease-in;
 }
 
-.operator img {
+.operators-icons .operator img {
     transition: all 0s;
     width: 100%;
+}
+
+.operator-presentation {
+    z-index: 100;
+    background-color: var(--dark-objects-bg-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.operator-presentation .hide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 101;
+    font-size: 24px;
+    margin: 20px;
+    padding: 5px 10px;
+    border: solid 1px var(--primary-color);
+    cursor: pointer;
+    transition: all .1s ease-out;
+}
+
+.operator-presentation .hide:hover {
+    color: var(--dark-font-color);
+    background-color: var(--primary-color);
+}
+
+.operator-presentation .content {
+    background-position: 80% 100%;
+    background-repeat: no-repeat;
+    text-align: left;
+    top: 0;
+    bottom: 0;
+}
+
+.operator-presentation .content .column {
+    padding-top: var(--back-button-height);
+    align-content: space-between;
+    display: grid;
+    height: 100%;
+}
+
+.operator-presentation .content .column .logo img {
+    height: 140px;
+}
+
+.operator-presentation .properties {
+    display: block;
+}
+
+.operator-presentation .property {
+    padding: 8px 0;
+}
+
+.operator-presentation .property .key {
+    font-size: 20px;
+    color: var(--light-dark-font-color);
+    text-transform: uppercase;
+}
+
+.operator-presentation .property .value {
+    font-size: 36px;
+    letter-spacing: 1.6px;
+    line-height: 1.6rem;
+    text-transform: uppercase;
 }

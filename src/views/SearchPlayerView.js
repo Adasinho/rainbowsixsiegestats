@@ -27,7 +27,25 @@ const SearchPlayerView = ({callback}) => {
         axios.get(searchAPI + inputUser)
             .then((response) => {
                 console.log(response);
-                setUsers(response.data.results);
+                if(response.data.totalresults === 0) {
+                    const tempUser = [{
+                        "p_id": "77527ba5-e9e7-427f-8b6e-1d92956a1e41",
+                        "p_name": "Temp user",
+                        "p_level": 154,
+                        "p_platform": "uplay",
+                        "p_user": "77527ba5-e9e7-427f-8b6e-1d92956a1e41",
+                        "p_currentmmr": 2842,
+                        "p_currentrank": 15,
+                        "kd": 1.12
+                    }];
+                    setUsers(tempUser);
+                    console.log(tempUser);
+                } else {
+                    setUsers(response.data.results);
+                }
+            })
+            .catch(res => {
+                console.log("Ubi servers down");
             })
             .finally((response) => {
                 dDelete();

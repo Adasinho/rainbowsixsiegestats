@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "520b82ef44f73646f2fa1ac6d19e013b",
+    "revision": "a362e8830ed4df6d99966c88804071e4",
     "url": "/rainbowsixsiegestats/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rainbowsixsiegestats/static/css/2.67123b20.chunk.css"
   },
   {
-    "revision": "a3aa7205011cf70c3cb0",
+    "revision": "18321aaf325ab9b42d12",
     "url": "/rainbowsixsiegestats/static/css/main.ca0ab440.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rainbowsixsiegestats/static/js/2.9125a404.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a3aa7205011cf70c3cb0",
-    "url": "/rainbowsixsiegestats/static/js/main.09171b25.chunk.js"
+    "revision": "18321aaf325ab9b42d12",
+    "url": "/rainbowsixsiegestats/static/js/main.e06e8f5f.chunk.js"
   },
   {
     "revision": "4cb7aca8a307d59f6be4",

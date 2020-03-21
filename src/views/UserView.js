@@ -10,6 +10,7 @@ import SeasonsView from "./SeasonsView";
 import UserNavView from "./UserNavView";
 import WeaponsView from "./WeaponsView";
 import OperatorsView from "./OperatorsView";
+import PlayerStats from "../collections/TempResponseFromAPI";
 
 const UserView = () => {
     let {userId} = useParams();
@@ -23,14 +24,14 @@ const UserView = () => {
     const [dependency, dAdd, dDelete] = useDependency();
 
     const getOperatorsByRole = (operators, role) => {
-        let operatorsCopy = Object.assign({}, operators);
+        let operatorsCopy = JSON.parse(JSON.stringify(operators));
+        console.log([operators]);
+        for(let [key, value] of Object.entries(operatorsCopy)) {
+            value.latinName = key;
+        }
+
         let val = Object.values(operatorsCopy).filter(operator => operator.role === role);
-        val.forEach(attacker => {
-            delete attacker.badge;
-            delete attacker.role;
-            delete attacker.ctu;
-            delete attacker.gadget;
-        });
+        console.log(val);
 
         return val;
     };
@@ -50,6 +51,10 @@ const UserView = () => {
                 dDelete();
             })
             .catch(res => {
+                setPlayer(PlayerStats);
+                setWeapons(PlayerStats.pvp.weapons);
+                setDefenders(getOperatorsByRole(PlayerStats.pvp.operators, "defender"));
+                setAttackers(getOperatorsByRole(PlayerStats.pvp.operators, "attacker"));
                 dDelete();
                 console.log("Can't get data about Player from Ubi API");
             })

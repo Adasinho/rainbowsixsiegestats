@@ -1,5 +1,8 @@
 import React, {useState} from "react";
+
 import Table from "../components/Table";
+import OperatorsLabel from "../components/OperatorsLabel";
+import {getOperatorPhotoPath, ImageType} from "../collections/Operators";
 
 const OperatorsView = ({attackers, defenders}) => {
     const [selected, setSelected] = useState(0);
@@ -19,9 +22,45 @@ const OperatorsView = ({attackers, defenders}) => {
         )
     };
 
+    const prepareArrayForOperatorsLabel = operators => {
+        let operatorsWithPhotos = JSON.parse(JSON.stringify(operators));
+
+        operatorsWithPhotos.map(operator => {
+            const iconPhoto = getOperatorPhotoPath(operator.latinName, ImageType.icon);
+            const posturePhoto = getOperatorPhotoPath(operator.latinName, ImageType.posture);
+
+            operator.icon = iconPhoto;
+            operator.posture = posturePhoto;
+        });
+
+        return operatorsWithPhotos;
+    };
+
+    const navWindow = (id, records, attributes) => {
+        const fullInfoOperators = prepareArrayForOperatorsLabel(records);
+        const onlyStatsOperators = JSON.parse(JSON.stringify(records));
+
+        onlyStatsOperators.forEach(operator => {
+            delete operator.badge;
+            delete operator.role;
+            delete operator.ctu;
+            delete operator.gadget;
+            delete operator.latinName;
+        });
+
+        return (
+            <div className={"nav-window"}>
+                <OperatorsLabel operators={fullInfoOperators}/>
+                <Table key={id} id={id} records={onlyStatsOperators} firstFieldAttribute={true} attributes={attributes}/>
+            </div>
+        )
+    };
+
+    const att = ["Operator", "Kills", "Deaths", "Wins", "Losses", "Headshots", "Melee Kills", "DBNO", "XP", "Play Time"];
+
     const navWindows = [
-        <Table key={"attackers"} id={"attackers"} records={attackers} firstFieldAttribute={true} attributes={["Operator", "Kills", "Deaths", "Wins", "Losses", "Headshots", "Melee Kills", "DBNO", "XP", "Play Time"]}/>,
-        <Table key={"defenders"} id={"defenders"} records={defenders} firstFieldAttribute={true} attributes={["Operator", "Kills", "Deaths", "Wins", "Losses", "Headshots", "Melee Kills", "DBNO", "XP", "Play Time"]}/>
+        navWindow("attackers", attackers, att),
+        navWindow("defenders", defenders, att)
     ];
 
     return (

@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be78a70-1e83-4716-9db1-ef6ccf942051" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/OperatorsView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/collections/TempResponseFromAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/OperatorsLabel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/components/operatorsLabel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hooks/useTableController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hooks/useTableController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/colors.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/components/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collections/Operators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/Operators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserNavView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserNavView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/OperatorsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/OperatorsView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/WeaponsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/WeaponsView.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -53,13 +51,14 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Projekty WWW\rainbowsixsiegestats\src\Hooks" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Projekty WWW\rainbowsixsiegestats\public" />
       <recent name="F:\Projekty WWW\rainbowsixsiegestats" />
       <recent name="F:\Projekty WWW\rainbowsixsiegestats\src" />
       <recent name="F:\Projekty WWW\rainbowsixsiegestats\src\views" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Projekty WWW\rainbowsixsiegestats\src\Hooks" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -104,7 +103,7 @@
       <workItem from="1584187799719" duration="14146000" />
       <workItem from="1584462830866" duration="606000" />
       <workItem from="1584524716735" duration="13478000" />
-      <workItem from="1584571432458" duration="9226000" />
+      <workItem from="1584571432458" duration="30867000" />
     </task>
     <servers />
   </component>

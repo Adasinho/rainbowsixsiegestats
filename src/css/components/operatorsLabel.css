@@ -1,0 +1,76 @@
+.operators-label {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: visible;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.operator {
+    position: relative;
+    width: 90px;
+    margin: 5px;
+    z-index: 10;
+    border: solid 1px var(--border-color);
+    background-color: var(--main-bg-color);
+    transition: transform .005s ease-in;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.operator:hover {
+    transform: scale(1.4, 1.4);
+    z-index: 12;
+    transition: transform 0.1s ease-out;
+    border: solid 1px var(--primary-color);
+}
+
+.operator:hover .badge img {
+    opacity: 0;
+    transition: opacity 0s;
+}
+
+.operator:hover .name {
+    opacity: 1;
+}
+
+.operator:hover img {
+    transform: scale(1.2, 1.2);
+    transition: all 2s ease-out;
+}
+
+.operator .badge, .name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 4px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.operator .name {
+    font-size: 12px;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+    width: 100%;
+}
+
+.operator .badge {
+    right: 0;
+    padding: 0 20px;
+}
+
+.operator .name {
+    opacity: 0;
+    color: whitesmoke;
+}
+
+.operator .badge img {
+    opacity: 1;
+    transition: opacity .1s ease-in;
+}
+
+.operator img {
+    transition: all 0s;
+    width: 100%;
+}

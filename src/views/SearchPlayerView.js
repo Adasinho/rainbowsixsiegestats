@@ -45,6 +45,18 @@ const SearchPlayerView = ({callback}) => {
                 }
             })
             .catch(res => {
+                const tempUser = [{
+                    "p_id": "77527ba5-e9e7-427f-8b6e-1d92956a1e41",
+                    "p_name": "Temp user",
+                    "p_level": 154,
+                    "p_platform": "uplay",
+                    "p_user": "77527ba5-e9e7-427f-8b6e-1d92956a1e41",
+                    "p_currentmmr": 2842,
+                    "p_currentrank": 15,
+                    "kd": 1.12
+                }];
+                setUsers(tempUser);
+                console.log(tempUser);
                 console.log("Ubi servers down");
             })
             .finally((response) => {

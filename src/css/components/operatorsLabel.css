@@ -11,7 +11,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    overflow: visible;
     width: 100%;
     padding: 50px 0;
 }
@@ -88,7 +87,7 @@
 .operator-presentation {
     z-index: 100;
     background-color: var(--dark-objects-bg-color);
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     height: 100%;
@@ -115,6 +114,7 @@
 
 .operator-presentation .content {
     background-position: 80% 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     text-align: left;
     top: 0;
@@ -151,4 +151,11 @@
     letter-spacing: 1.6px;
     line-height: 1.6rem;
     text-transform: uppercase;
+}
+
+.responsive-no-overflow-wrapper {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
 }

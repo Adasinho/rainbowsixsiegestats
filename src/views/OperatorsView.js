@@ -30,6 +30,7 @@ const OperatorsView = ({attackers, defenders}) => {
             delete operator.ctu;
             delete operator.gadget;
             delete operator.latinName;
+            delete operator.xp;
         });
 
         return (
@@ -44,7 +45,7 @@ const OperatorsView = ({attackers, defenders}) => {
         )
     };
 
-    const att = ["Operator", "Kills", "Deaths", "Wins", "Losses", "Headshots", "Melee Kills", "DBNO", "XP", "Play Time"];
+    const att = ["Operator", "Kills", "Deaths", "Wins", "Losses", "Headshots", "Melee Kills", "DBNO", "Play Time"];
 
     const navItems = ["Attackers", "Defenders"];
     const contentTabs = [

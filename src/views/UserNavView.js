@@ -7,7 +7,7 @@ const UserNavView = ({url}) => {
             <div className={"container"}>
                 <div className={"row"}>
                     <div className={"col-3"}>
-                        <Link to={`${url}`}>Overall</Link>
+                        <Link to={`${url}`}>Stats</Link>
                     </div>
                     <div className={"col-3"}>
                         <Link to={`${url}/seasons`}>Seasons</Link>

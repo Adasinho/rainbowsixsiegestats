@@ -31,7 +31,7 @@ const OperatorsLabel = ({operators}) => {
 
         const tl = gsap.timeline({defaults: {ease: 'power3.inOut'}});
 
-        tl.delay(.25).to([operatorsHTML, operatorsContainerHTML], {duration: 2, autoAlpha: 1});
+        tl.delay(.1).to([operatorsHTML, operatorsContainerHTML], {duration: 1, autoAlpha: 1});
     }, []);
 
     const handleShowClick = operator => {

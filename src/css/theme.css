@@ -1,5 +1,37 @@
 @import "colors.css";
 
+html {
+    font-size: 16px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    html {
+        font-size: 24px;
+    }
+}
+
 body {
     background-color: var(--main-bg-color);
 }
@@ -40,15 +72,33 @@ section#operators .nav-section-tabs {
     justify-content: space-around;
 }
 
-header input {
-    border-radius: 15px;
-    padding: 5px 15px;
-    width: 100%;
+#search-player {
+    background-color: var(--dark-bg-color);
+    color: var(--light-font-color);
 }
 
-header form {
+#search-player .title {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+#search-player form {
     display: flex;
     align-items: center;
+}
+
+.platform-element {
+    cursor: pointer;
+    transition: all .1s ease-out;
+}
+
+.platform-element:hover {
+    background-color: var(--primary-light-color);
+}
+
+.platform-element.selected {
+    background-color: var(--primary-color);
+    color: var(--light-font-color);
 }
 
 nav {
@@ -78,42 +128,6 @@ nav a:hover {
     padding: 20px;
 }
 
-.window {
-    margin: 10px 0;
-    border: solid 1px var(--light-border-color);
-}
-
-.window .title {
-    background-color: var(--table-head-color);
-    color: var(--light-font-color);
-    text-align: left;
-    font-size: 32px;
-    padding: 10px 20px;
-    border-bottom: solid 2px var(--primary-color);
-}
-
-.items {
-    background-color: var(--light-font-color);
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.items .item {
-    padding: 10px;
-}
-
-.items .item .prop-name {
-    color: var(--dark-font-color);
-    font-size: 14px;
-    text-transform: uppercase;
-}
-
-.items .item .prop-value {
-    font-size: 32px;
-    line-height: 1;
-}
-
 .seasonsView {
     padding-top: 15px;
 }
@@ -130,4 +144,14 @@ nav a:hover {
 .dark-background {
     background-color: var(--dark-bg-color);
     color: var(--light-font-color);
+}
+
+.btn-color {
+    border-color: var(--form-border-color);
+    background-color: var(--form-bg-color);
+    color: var(--dark-font-color);
+}
+
+.form-control:focus, .btn:focus {
+    box-shadow: none;
 }

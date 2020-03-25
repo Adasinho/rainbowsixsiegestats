@@ -1,0 +1,38 @@
+.window {
+    text-align: left;
+    border: solid 1px var(--light-border-color);
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+.window .title {
+    background-color: var(--table-head-color);
+    color: var(--light-font-color);
+    font-size: 1rem;
+    padding: .8rem 1rem;
+    border-bottom: solid 4px var(--primary-color);
+}
+
+.window .items {
+    background-color: var(--light-font-color);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+}
+
+.window .item {
+    padding: 10px;
+}
+
+.window .prop-name {
+    color: var(--dark-font-color);
+    font-size: .7rem;
+    text-transform: uppercase;
+}
+
+.window .prop-value {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1;
+}

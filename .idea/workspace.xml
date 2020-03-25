@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6be78a70-1e83-4716-9db1-ef6ccf942051" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Platforms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/components/window.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/PlayerView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/OperatorsLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OperatorsLabel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Window.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/colors.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/components/operatorsLabel.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/operatorsLabel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/components/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/components/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ApplicationView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ApplicationView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/OperatorsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/OperatorsView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/SearchPlayerView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SearchPlayerView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserNavView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserNavView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserView.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +61,14 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Projekty WWW\rainbowsixsiegestats\src\Hooks" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Projekty WWW\rainbowsixsiegestats\public" />
       <recent name="F:\Projekty WWW\rainbowsixsiegestats" />
       <recent name="F:\Projekty WWW\rainbowsixsiegestats\src" />
       <recent name="F:\Projekty WWW\rainbowsixsiegestats\src\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Projekty WWW\rainbowsixsiegestats\src\Hooks" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -102,7 +114,8 @@
       <workItem from="1584462830866" duration="606000" />
       <workItem from="1584524716735" duration="13478000" />
       <workItem from="1584571432458" duration="58412000" />
-      <workItem from="1584881108541" duration="16981000" />
+      <workItem from="1584881108541" duration="17904000" />
+      <workItem from="1585052164403" duration="30276000" />
     </task>
     <servers />
   </component>
@@ -141,9 +154,9 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="936" y="240" key="run.anything.popup/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1584798181558" />
-    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584796801913">
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585067360790">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1584796801913" />
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040/-1920.0.1920.1040@0.0.2560.1040" timestamp="1585067360790" />
   </component>
 </project>

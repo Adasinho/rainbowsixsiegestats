@@ -8,6 +8,7 @@
 }
 
 .table {
+    font-size: .8rem;
     width: 100%;
     border: solid 1px var(--light-border-color);
     background-color: var(--light-objects-bg-color);

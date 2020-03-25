@@ -8,7 +8,7 @@ const ApplicationView = () => {
     return (
         <Switch>
             <Route exact path={"/"} component={() => <SearchPlayerView/>} />
-            <Route path={"/user/:userId"} component={() => <UserView/>} />
+            <Route path={"/user/:platform/:userId"} component={() => <UserView/>} />
         </Switch>
     );
 };

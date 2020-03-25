@@ -4,59 +4,42 @@ import axios from "axios";
 
 import {useDependency} from "../Hooks/useDependency";
 
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import {faPlaystation, faXbox, faWindows} from "@fortawesome/free-brands-svg-icons";
 
 import ClipLoader from "react-spinners/ClipLoader";
 
 import "../css/list.css";
+import Platforms from "../components/Platforms";
 
-const SearchPlayerView = ({callback}) => {
+const platforms = [
+    { name: "uplay", icon: faWindows },
+    { name: "psn", icon: faPlaystation },
+    { name: "xbl", icon: faXbox }
+];
+
+const SearchPlayerView = () => {
     const [inputUser, setInputUser] = useState("");
-    const [users, setUsers] = useState(null);
+    const [selectedPlatform, setSelectedPlatform] = useState(0);
 
     const [dependency, dAdd, dDelete] = useDependency();
 
     let history = useHistory();
 
     const getUsers = () => {
-        const searchAPI = "https://r6tab.com/api/search.php?platform=uplay&search=";
+        const searchAPI = `${process.env.REACT_APP_API_DOMAIN}/user/search`;
 
         dAdd();
 
-        axios.get(searchAPI + inputUser)
+        axios.post(searchAPI, {
+                username: inputUser,
+                platform: platforms[selectedPlatform].name
+            })
             .then((response) => {
                 console.log(response);
-                if(response.data.totalresults === 0) {
-                    const tempUser = [{
-                        "p_id": "77527ba5-e9e7-427f-8b6e-1d92956a1e41",
-                        "p_name": "Temp user",
-                        "p_level": 154,
-                        "p_platform": "uplay",
-                        "p_user": "77527ba5-e9e7-427f-8b6e-1d92956a1e41",
-                        "p_currentmmr": 2842,
-                        "p_currentrank": 15,
-                        "kd": 1.12
-                    }];
-                    setUsers(tempUser);
-                    console.log(tempUser);
-                } else {
-                    setUsers(response.data.results);
-                }
+                setUser(response.data[0].id);
             })
             .catch(res => {
-                const tempUser = [{
-                    "p_id": "77527ba5-e9e7-427f-8b6e-1d92956a1e41",
-                    "p_name": "Temp user",
-                    "p_level": 154,
-                    "p_platform": "uplay",
-                    "p_user": "77527ba5-e9e7-427f-8b6e-1d92956a1e41",
-                    "p_currentmmr": 2842,
-                    "p_currentrank": 15,
-                    "kd": 1.12
-                }];
-                setUsers(tempUser);
-                console.log(tempUser);
+                setUser("77527ba5-e9e7-427f-8b6e-1d92956a1e41");
                 console.log("Ubi servers down");
             })
             .finally((response) => {
@@ -65,25 +48,7 @@ const SearchPlayerView = ({callback}) => {
     };
 
     const setUser = (id) => {
-        history.push(`/user/${id}`);
-    };
-
-    const usersSection = () => {
-        return (
-            <div className={"col-6"}>
-                <div className={"users-list"}>
-                    {users ? users.map(userItem) : null}
-                </div>
-            </div>
-        );
-    };
-
-    const userItem = (user) => {
-        return (
-            <div key={user.p_id} className={"user"} onClick={() => setUser(user.p_id)}>
-                <div className={"name"}>{user.p_name}</div>
-            </div>
-        )
+        history.push(`/user/${platforms[selectedPlatform].name}/${id}`);
     };
 
     const handleChange = (event) => {
@@ -104,23 +69,29 @@ const SearchPlayerView = ({callback}) => {
     };
 
     return (
-        <header className="App-header">
+        <section id={"search-player"} className="App-header">
             <div className={"container"}>
                 <div className={"row justify-center"}>
-                    <div className={"col-12"}>
+                    <div className={"col-12 justify-center"}>
                         <div className={"title"}>Rainbow Six Siege Stats</div>
+                        <form className={"col-12 col-md-10 m-auto"} onSubmit={handleSubmit}>
+                            <div className={"input-group"}>
+                                <div className="input-group-prepend">
+                                    <Platforms elements={platforms} callBack={key => setSelectedPlatform(key)}/>
+                                </div>
+                                <input type={"text"} className={"form-control"} placeholder={"Type your username in R6"} onChange={handleChange}/>
+                                <div className="input-group-append">
+                                    <button onClick={handleSubmit} className="btn btn-color" type={"button"}>Search</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                    <form className={"col-6"} onSubmit={handleSubmit}>
-                        <input placeholder={"Type your username in R6"} onChange={handleChange}>
-                        </input>
-                        <FontAwesomeIcon className={"ml-3"} icon={faSearch}/>
-                    </form>
                 </div>
                 <div className={"row justify-center"}>
-                    {dependency ? loadingSection() : usersSection()}
+                    {dependency ? loadingSection() : null}
                 </div>
             </div>
-        </header>
+        </section>
     );
 };
 export default SearchPlayerView;

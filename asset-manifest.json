@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/rainbowsixsiegestats/static/css/main.20f6e60d.chunk.css",
-    "main.js": "/rainbowsixsiegestats/static/js/main.d4e5f9af.chunk.js",
-    "main.js.map": "/rainbowsixsiegestats/static/js/main.d4e5f9af.chunk.js.map",
+    "main.css": "/rainbowsixsiegestats/static/css/main.bac438e3.chunk.css",
+    "main.js": "/rainbowsixsiegestats/static/js/main.02f20ff9.chunk.js",
+    "main.js.map": "/rainbowsixsiegestats/static/js/main.02f20ff9.chunk.js.map",
     "runtime-main.js": "/rainbowsixsiegestats/static/js/runtime-main.9c4eaa65.js",
     "runtime-main.js.map": "/rainbowsixsiegestats/static/js/runtime-main.9c4eaa65.js.map",
     "static/css/2.67123b20.chunk.css": "/rainbowsixsiegestats/static/css/2.67123b20.chunk.css",
-    "static/js/2.05d71106.chunk.js": "/rainbowsixsiegestats/static/js/2.05d71106.chunk.js",
-    "static/js/2.05d71106.chunk.js.map": "/rainbowsixsiegestats/static/js/2.05d71106.chunk.js.map",
+    "static/js/2.9a4f9960.chunk.js": "/rainbowsixsiegestats/static/js/2.9a4f9960.chunk.js",
+    "static/js/2.9a4f9960.chunk.js.map": "/rainbowsixsiegestats/static/js/2.9a4f9960.chunk.js.map",
     "index.html": "/rainbowsixsiegestats/index.html",
-    "precache-manifest.d08799e3eb76d1da145336d20954d7f7.js": "/rainbowsixsiegestats/precache-manifest.d08799e3eb76d1da145336d20954d7f7.js",
+    "precache-manifest.698bbe56097589a5487633d13a17c890.js": "/rainbowsixsiegestats/precache-manifest.698bbe56097589a5487633d13a17c890.js",
     "service-worker.js": "/rainbowsixsiegestats/service-worker.js",
     "static/css/2.67123b20.chunk.css.map": "/rainbowsixsiegestats/static/css/2.67123b20.chunk.css.map",
-    "static/css/main.20f6e60d.chunk.css.map": "/rainbowsixsiegestats/static/css/main.20f6e60d.chunk.css.map",
-    "static/js/2.05d71106.chunk.js.LICENSE.txt": "/rainbowsixsiegestats/static/js/2.05d71106.chunk.js.LICENSE.txt"
+    "static/css/main.bac438e3.chunk.css.map": "/rainbowsixsiegestats/static/css/main.bac438e3.chunk.css.map",
+    "static/js/2.9a4f9960.chunk.js.LICENSE.txt": "/rainbowsixsiegestats/static/js/2.9a4f9960.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9c4eaa65.js",
     "static/css/2.67123b20.chunk.css",
-    "static/js/2.05d71106.chunk.js",
-    "static/css/main.20f6e60d.chunk.css",
-    "static/js/main.d4e5f9af.chunk.js"
+    "static/js/2.9a4f9960.chunk.js",
+    "static/css/main.bac438e3.chunk.css",
+    "static/js/main.02f20ff9.chunk.js"
   ]
 }

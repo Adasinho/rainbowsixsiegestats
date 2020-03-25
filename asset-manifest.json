@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/rainbowsixsiegestats/static/css/main.bac438e3.chunk.css",
-    "main.js": "/rainbowsixsiegestats/static/js/main.02f20ff9.chunk.js",
-    "main.js.map": "/rainbowsixsiegestats/static/js/main.02f20ff9.chunk.js.map",
+    "main.js": "/rainbowsixsiegestats/static/js/main.1d0ba9ef.chunk.js",
+    "main.js.map": "/rainbowsixsiegestats/static/js/main.1d0ba9ef.chunk.js.map",
     "runtime-main.js": "/rainbowsixsiegestats/static/js/runtime-main.9c4eaa65.js",
     "runtime-main.js.map": "/rainbowsixsiegestats/static/js/runtime-main.9c4eaa65.js.map",
     "static/css/2.67123b20.chunk.css": "/rainbowsixsiegestats/static/css/2.67123b20.chunk.css",
     "static/js/2.9a4f9960.chunk.js": "/rainbowsixsiegestats/static/js/2.9a4f9960.chunk.js",
     "static/js/2.9a4f9960.chunk.js.map": "/rainbowsixsiegestats/static/js/2.9a4f9960.chunk.js.map",
     "index.html": "/rainbowsixsiegestats/index.html",
-    "precache-manifest.698bbe56097589a5487633d13a17c890.js": "/rainbowsixsiegestats/precache-manifest.698bbe56097589a5487633d13a17c890.js",
+    "precache-manifest.cdfaaf5e5fffeb007f328baa0e9d605c.js": "/rainbowsixsiegestats/precache-manifest.cdfaaf5e5fffeb007f328baa0e9d605c.js",
     "service-worker.js": "/rainbowsixsiegestats/service-worker.js",
     "static/css/2.67123b20.chunk.css.map": "/rainbowsixsiegestats/static/css/2.67123b20.chunk.css.map",
     "static/css/main.bac438e3.chunk.css.map": "/rainbowsixsiegestats/static/css/main.bac438e3.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.67123b20.chunk.css",
     "static/js/2.9a4f9960.chunk.js",
     "static/css/main.bac438e3.chunk.css",
-    "static/js/main.02f20ff9.chunk.js"
+    "static/js/main.1d0ba9ef.chunk.js"
   ]
 }
